@@ -1,6 +1,8 @@
 # War of the Vikings Launch Fix
 Launch War of the Vikings game without backend.
-
+- Everything's unlocked.
+- Training works.
+- Multiplayer not tested.
 ## Using
 > [!WARNING]
 > Use at your own risk.
