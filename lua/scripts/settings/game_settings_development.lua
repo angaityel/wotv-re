@@ -131,11 +131,7 @@ else
 	GameSettingsDevelopment.enable_paradox_os = false
 end
 
-if table.find(argv, "-eac") then
-	GameSettingsDevelopment.anti_cheat_enabled = true
-else
-	GameSettingsDevelopment.anti_cheat_enabled = false
-end
+GameSettingsDevelopment.anti_cheat_enabled = false
 
 if table.find(argv, "-no-tutorial") then
 	GameSettingsDevelopment.enforce_tutorial = false
