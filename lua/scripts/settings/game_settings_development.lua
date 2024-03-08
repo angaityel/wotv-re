@@ -157,100 +157,15 @@ function GameSettingsDevelopment.game_server_created_callback()
 	end
 end
 
-if script_data.settings.dedicated_server then
-	GameSettingsDevelopment.network_mode = "steam"
-
-	DebugHelper.debug_entity_manager(true)
-elseif script_data.settings.content_revision then
-	GameSettingsDevelopment.network_mode = "steam"
-
-	if rawget(_G, "Steam") then
-		local app_id = Steam.app_id()
-
-		if app_id == AppIDSettings.app_ids.main then
-			GameSettingsDevelopment.enable_micro_transactions = true
-			GameSettingsDevelopment.allow_host_game = false
-			GameSettingsDevelopment.unlock_all = false
-			GameSettingsDevelopment.show_fps = Application.user_setting("show_fps") or false
-			GameSettingsDevelopment.hide_lan_tab = false
-			GameSettingsDevelopment.disable_singleplayer = false
-			GameSettingsDevelopment.disable_coat_of_arms_editor = false
-			GameSettingsDevelopment.disable_character_sheet = true
-			GameSettingsDevelopment.disable_key_mappings = false
-			GameSettingsDevelopment.disable_uniform_lod = not script_data.settings.uniform_lod
-			GameSettingsDevelopment.allow_old_join_game = false
-			GameSettingsDevelopment.hide_duel_mode = true
-			GameSettingsDevelopment.show_version_info = false
-
-			DebugHelper.debug_positions_and_rotations(false)
-
-			GameSettingsDevelopment.disable_character_profiles_editor = false
-			GameSettingsDevelopment.network_timeout = 6
-			GameSettingsDevelopment.idle_kick_time = 300
-
-			if GameSettingsDevelopment.dev_build then
-				GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.test_backend
-			else
-				GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.live_backend
-			end
-		elseif app_id == AppIDSettings.app_ids.alpha then
-			GameSettingsDevelopment.enable_micro_transactions = true
-			GameSettingsDevelopment.allow_host_game = false
-			GameSettingsDevelopment.unlock_all = false
-			GameSettingsDevelopment.show_fps = Application.user_setting("show_fps") or false
-			GameSettingsDevelopment.hide_lan_tab = false
-			GameSettingsDevelopment.disable_singleplayer = false
-			GameSettingsDevelopment.disable_coat_of_arms_editor = false
-			GameSettingsDevelopment.disable_character_sheet = true
-			GameSettingsDevelopment.disable_key_mappings = false
-			GameSettingsDevelopment.disable_uniform_lod = not script_data.settings.uniform_lod
-			GameSettingsDevelopment.allow_old_join_game = false
-			GameSettingsDevelopment.hide_duel_mode = true
-			GameSettingsDevelopment.show_version_info = false
-
-			DebugHelper.debug_positions_and_rotations(true)
-			DebugHelper.debug_rpcs(true)
-
-			GameSettingsDevelopment.disable_character_profiles_editor = false
-			GameSettingsDevelopment.network_timeout = 6
-			GameSettingsDevelopment.idle_kick_time = 300
-			GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.testing_1_backend
-		end
-	end
-elseif Application.build() == "dev" or Application.build() == "debug" then
-	if rawget(_G, "Steam") then
-		local app_id = Steam.app_id()
-
-		if app_id == AppIDSettings.app_ids.main then
-			if GameSettingsDevelopment.dev_build then
-				GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.test_backend
-			else
-				GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.live_backend
-			end
-		elseif app_id == AppIDSettings.app_ids.alpha then
-			GameSettingsDevelopment.backend.address = GameSettingsDevelopment.backend.testing_1_backend
-		end
-	end
-
-	GameSettingsDevelopment.disable_full_game_licence_check = false
-	GameSettingsDevelopment.network_mode = EDITOR_LAUNCH and "lan" or table.find(argv, "-force-steam") and "steam" or "lan"
-	GameSettingsDevelopment.unlock_all = true
-	GameSettingsDevelopment.all_on_same_team = true
-	GameSettingsDevelopment.allow_host_game = true
-	GameSettingsDevelopment.show_fps = true
-	GameSettingsDevelopment.enable_micro_transactions = false
-	GameSettingsDevelopment.enable_debug_parry_stance = true
-
-	DebugHelper.debug_positions_and_rotations(true)
-	DebugHelper.debug_rpcs(true)
-
-	GameSettingsDevelopment.disable_character_profiles_editor = false
-
-	DebugHelper.debug_entity_manager(true)
-else
-	print("Running release game without content revision, quitting.")
-	Application.quit()
-end
+DebugHelper.debug_positions_and_rotations(false)
+GameSettingsDevelopment.network_mode = "steam"
+GameSettingsDevelopment.disable_full_game_licence_check = true
+GameSettingsDevelopment.unlock_all = true
+GameSettingsDevelopment.allow_host_game = true
+GameSettingsDevelopment.show_fps = true
+GameSettingsDevelopment.enable_micro_transactions = false
+GameSettingsDevelopment.disable_character_profiles_editor = false
+GameSettingsDevelopment.backend.address = "0.0.0.0"
 
 GameSettingsDevelopment.network_port = 10000
 GameSettingsDevelopment.network_revision_check_enabled = true
