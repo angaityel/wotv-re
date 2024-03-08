@@ -121,9 +121,9 @@ GameSettingsDevelopment.enum_slider_move_value = 20
 GameSettingsDevelopment.override_navmesh_spawn = true
 GameSettingsDevelopment.dev_build = false
 GameSettingsDevelopment.backend = GameSettingsDevelopment.backend or {}
-GameSettingsDevelopment.backend.test_backend = "wotv.paradoxplaza.com"
-GameSettingsDevelopment.backend.live_backend = "wotv.paradoxplaza.com"
-GameSettingsDevelopment.backend.testing_1_backend = "wotv.paradoxplaza.com"
+GameSettingsDevelopment.backend.test_backend = "0.0.0.0"
+GameSettingsDevelopment.backend.live_backend = "0.0.0.0"
+GameSettingsDevelopment.backend.testing_1_backend = "0.0.0.0"
 
 GameSettingsDevelopment.enable_paradox_os = false
 
@@ -135,9 +135,9 @@ else
 	GameSettingsDevelopment.enforce_tutorial = true
 end
 
-GameSettingsDevelopment.paradox_api = "https://api.paradoxplaza.com/%s"
+GameSettingsDevelopment.paradox_api = "https://0.0.0.0/%s"
 GameSettingsDevelopment.paradox_api_key = "64DC4DC6508F4A9D823179D4D99DB4EE"
-GameSettingsDevelopment.paradox_telemetry_api = "https://opstm.paradoxplaza.com/%s"
+GameSettingsDevelopment.paradox_telemetry_api = "https://0.0.0.0/%s"
 
 function GameSettingsDevelopment.game_server_created_callback()
 	local app_id = SteamGameServer.app_id()

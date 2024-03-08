@@ -8,7 +8,7 @@ local TIMEOUT = 10
 
 function ChangelogManager:init()
 	self._loader = UrlLoader()
-	self._url = "https://services.paradoxplaza.com/head/feeds/wotv-patchnotes/content"
+	self._url = "https://0.0.0.0/head/feeds/wotv-patchnotes/content"
 end
 
 function ChangelogManager:get_changelog(callback)

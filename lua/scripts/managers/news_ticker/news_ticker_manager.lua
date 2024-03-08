@@ -11,7 +11,7 @@ function NewsTickerManager:init(layout_settings)
 	end
 
 	self._loader = UrlLoader()
-	self._url = "https://services.paradoxplaza.com/head/feeds/wotv-news-ticker/content"
+	self._url = "https://0.0.0.0/head/feeds/wotv-news-ticker/content"
 	self._layout_settings = layout_settings
 	self._news_ticker_container = NewsTickerMenuContainer:new()
 	self._enabled = false
