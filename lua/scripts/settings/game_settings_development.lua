@@ -125,11 +125,7 @@ GameSettingsDevelopment.backend.test_backend = "wotv.paradoxplaza.com"
 GameSettingsDevelopment.backend.live_backend = "wotv.paradoxplaza.com"
 GameSettingsDevelopment.backend.testing_1_backend = "wotv.paradoxplaza.com"
 
-if table.find(argv, "-force-paradox-os") then
-	GameSettingsDevelopment.enable_paradox_os = true
-else
-	GameSettingsDevelopment.enable_paradox_os = false
-end
+GameSettingsDevelopment.enable_paradox_os = false
 
 GameSettingsDevelopment.anti_cheat_enabled = false
 
