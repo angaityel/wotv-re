@@ -2,7 +2,7 @@
 Launch War of the Vikings game without backend.
 - Everything's unlocked.
 - Training works.
-- Multiplayer not tested.
+- Multiplayer works. Select Join or Host(You can change map and game mode).
 ## Using
 > [!WARNING]
 > Use at your own risk.
