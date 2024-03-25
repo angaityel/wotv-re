@@ -1,0 +1,32 @@
+﻿-- chunkname: @scripts/settings/projectile_settings.lua
+
+ProjectileSettings = ProjectileSettings or {}
+ProjectileSettings.gravity = Vector3Box(0, 0, -12)
+ProjectileSettings.standard_arrow_long = ProjectileSettings.standard_arrow_long or {}
+ProjectileSettings.standard_arrow_long.unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard"
+ProjectileSettings.standard_arrow_long.dummy_unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard_dummy"
+ProjectileSettings.standard_arrow_long.local_arrow_trail_particle = "fx/player_arrow_trail"
+ProjectileSettings.standard_arrow_long.remote_arrow_trail_particle = "fx/arrow_trail"
+ProjectileSettings.standard_arrow_long.parent_link_node = "a_right_hand"
+ProjectileSettings.standard_arrow_long.damage_type = "piercing_projectile"
+ProjectileSettings.standard_arrow_long_rough = ProjectileSettings.standard_arrow_long_rough or {}
+ProjectileSettings.standard_arrow_long_rough.unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard_rough"
+ProjectileSettings.standard_arrow_long_rough.dummy_unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard_rough_dummy"
+ProjectileSettings.standard_arrow_long_rough.local_arrow_trail_particle = "fx/player_arrow_trail"
+ProjectileSettings.standard_arrow_long_rough.remote_arrow_trail_particle = "fx/arrow_trail"
+ProjectileSettings.standard_arrow_long_rough.parent_link_node = "a_right_hand"
+ProjectileSettings.standard_arrow_long_rough.damage_type = "piercing_projectile"
+ProjectileSettings.standard_arrow_long_ornamented = ProjectileSettings.standard_arrow_long_ornamented or {}
+ProjectileSettings.standard_arrow_long_ornamented.unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard_ornamented"
+ProjectileSettings.standard_arrow_long_ornamented.dummy_unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_standard_ornamented_dummy"
+ProjectileSettings.standard_arrow_long_ornamented.local_arrow_trail_particle = "fx/player_arrow_trail"
+ProjectileSettings.standard_arrow_long_ornamented.remote_arrow_trail_particle = "fx/arrow_trail"
+ProjectileSettings.standard_arrow_long_ornamented.parent_link_node = "a_right_hand"
+ProjectileSettings.standard_arrow_long_ornamented.damage_type = "piercing_projectile"
+ProjectileSettings.fire_arrow_long = ProjectileSettings.fire_arrow_long or {}
+ProjectileSettings.fire_arrow_long.unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_fire"
+ProjectileSettings.fire_arrow_long.dummy_unit = "units/weapons/wpn_projectiles/wpn_arrow/wpn_long_arrow_fire_dummy"
+ProjectileSettings.fire_arrow_long.local_arrow_trail_particle = "fx/player_arrow_trail"
+ProjectileSettings.fire_arrow_long.remote_arrow_trail_particle = "fx/arrow_trail"
+ProjectileSettings.fire_arrow_long.parent_link_node = "a_right_hand"
+ProjectileSettings.fire_arrow_long.damage_type = "piercing_projectile"
