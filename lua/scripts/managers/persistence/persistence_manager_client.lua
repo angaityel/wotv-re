@@ -29,7 +29,7 @@ function PersistenceManagerClient:connect(connect_callback)
 
 		local timeout_duration
 
-		timeout_duration = self.backend_connect_try_count < 10 and 10 or 30
+		timeout_duration = 1
 
 		Managers.backend:connect(self._settings.connection.address, Steam.app_id(), Backend.CLIENT, self._settings.connection.port, self._settings.connection.interface, callback, Managers.time:time("main") + timeout_duration)
 	end
@@ -41,9 +41,6 @@ function PersistenceManagerClient:cb_connected(response)
 
 		print("[Backend] Authenticating...")
 		Managers.backend:steam_login(callback(self, "cb_authenticated"))
-	elseif self.backend_connect_try_count < 10 then
-		printf("Backed connection failed '%s', retrying #%d", response.error, self.backend_connect_try_count)
-		self:connect(self._connect_callback)
 	else
 		print("Error (cb_connected)", response.error)
 		self._connect_callback(response.error)

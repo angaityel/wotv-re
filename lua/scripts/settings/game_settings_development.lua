@@ -80,7 +80,21 @@ else
 end
 
 GameSettingsDevelopment.default_time_limit = 25920000
+for i,v in ipairs(argv) do
+	if argv[i] == "-timelimit" then
+		GameSettingsDevelopment.default_time_limit = tonumber(argv[i + 1])
+	end
+end
 GameSettingsDevelopment.default_win_score = 100
+for i,v in ipairs(argv) do
+	if argv[i] == "-winscore" then
+		if tonumber(argv[i + 1]) > 1000 then
+			GameSettingsDevelopment.default_win_score = 1000
+		else
+			GameSettingsDevelopment.default_win_score = tonumber(argv[i + 1])
+		end
+	end
+end
 GameSettingsDevelopment.buy_game_url = "http://www.waroftherosesvikings.com/buy"
 GameSettingsDevelopment.twitter_url = "http://twitter.com/WaroftheVikings"
 GameSettingsDevelopment.facebook_url = "http://www.facebook.com/WaroftheVikings"
@@ -99,12 +113,12 @@ GameSettingsDevelopment.disable_uniform_lod = false
 GameSettingsDevelopment.allow_old_join_game = true
 GameSettingsDevelopment.network_timeout = 10
 GameSettingsDevelopment.backend_timeout = 10
-GameSettingsDevelopment.show_version_info = true
+GameSettingsDevelopment.show_version_info = false
 GameSettingsDevelopment.show_nda_in_splash_screen = false
 GameSettingsDevelopment.server_license_check = true
 GameSettingsDevelopment.enable_robot_player = false
 GameSettingsDevelopment.robot_player_profile = "random"
-GameSettingsDevelopment.all_on_same_team = false
+GameSettingsDevelopment.all_on_same_team = true
 GameSettingsDevelopment.allow_multiple_dot_effects = false
 GameSettingsDevelopment.default_environment = "rendering/mercury_default"
 GameSettingsDevelopment.debug_outlines = false
@@ -124,6 +138,7 @@ GameSettingsDevelopment.backend = GameSettingsDevelopment.backend or {}
 GameSettingsDevelopment.backend.test_backend = "0.0.0.0"
 GameSettingsDevelopment.backend.live_backend = "0.0.0.0"
 GameSettingsDevelopment.backend.testing_1_backend = "0.0.0.0"
+GameSettingsDevelopment.backend.address = "0.0.0.0"
 
 GameSettingsDevelopment.enable_paradox_os = false
 
@@ -157,15 +172,23 @@ function GameSettingsDevelopment.game_server_created_callback()
 	end
 end
 
-DebugHelper.debug_positions_and_rotations(false)
-GameSettingsDevelopment.network_mode = "steam"
-GameSettingsDevelopment.disable_full_game_licence_check = true
-GameSettingsDevelopment.unlock_all = true
-GameSettingsDevelopment.allow_host_game = true
-GameSettingsDevelopment.show_fps = true
-GameSettingsDevelopment.enable_micro_transactions = false
-GameSettingsDevelopment.disable_character_profiles_editor = false
-GameSettingsDevelopment.backend.address = "0.0.0.0"
+if script_data.settings.dedicated_server then
+	GameSettingsDevelopment.network_mode = "steam"
+	GameSettingsDevelopment.backend.address = "0.0.0.0"
+	DebugHelper.debug_entity_manager(true)
+elseif script_data.settings.content_revision then
+	GameSettingsDevelopment.network_mode = "steam"
+	GameSettingsDevelopment.disable_full_game_licence_check = true
+	GameSettingsDevelopment.unlock_all = true
+	GameSettingsDevelopment.allow_host_game = true
+	GameSettingsDevelopment.show_fps = Application.user_setting("show_fps") or false
+	GameSettingsDevelopment.disable_uniform_lod = not script_data.settings.uniform_lod
+	GameSettingsDevelopment.enable_micro_transactions = false
+	GameSettingsDevelopment.disable_character_profiles_editor = false
+	GameSettingsDevelopment.hide_duel_mode = false
+	GameSettingsDevelopment.backend.address = "0.0.0.0"
+	DebugHelper.debug_positions_and_rotations(false)
+end
 
 GameSettingsDevelopment.network_port = 10000
 GameSettingsDevelopment.network_revision_check_enabled = true

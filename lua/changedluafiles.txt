@@ -2,3 +2,5 @@ scripts/settings/game_settings_development.lua
 scripts/game_state/state_splash_screen.lua
 scripts/managers/changelog/changelog_manager.lua
 scripts/managers/news_ticker/news_ticker_manager.lua
+foundation/scripts/managers/network/lobby_manager_steam.lua
+scripts/managers/persistence/persistence_manager_client.lua
