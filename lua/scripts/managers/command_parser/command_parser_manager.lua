@@ -66,7 +66,7 @@ function CommandParserManager:destroy()
 end
 
 Commands = {}
-
+--[[
 function Commands:script(lua_code, player)
 	if Application.build() ~= "dev" then
 		return false, ""
@@ -117,7 +117,7 @@ function Commands:location(text)
 
 	Managers.state.event:trigger("location_print_requested")
 end
-
+--]]
 function Commands:say(text, player)
 	if text and text ~= "" then
 		local channel_name = "all"
@@ -151,7 +151,7 @@ function Commands:say_team(text, player)
 
 	return false, "Missing text or team for /say_team"
 end
-
+--[[
 function Commands:say_admin(text, player)
 	if Managers.lobby.server then
 		if text and text ~= "" then
@@ -165,7 +165,7 @@ function Commands:say_admin(text, player)
 		return false, sprintf("Server command only.")
 	end
 end
-
+--]]
 function Commands:kill(text, player)
 	local network_manager = Managers.state.network
 	local unit = player.player_unit
@@ -200,7 +200,7 @@ function Commands:kill(text, player)
 		return false, "No character to kill."
 	end
 end
-
+--[[
 function Commands:console(args, player)
 	if Application.build() ~= "dev" or not args then
 		return false
@@ -653,3 +653,4 @@ function Commands:vote_map(map_pair, player)
 end
 
 Commands.vote_level = Commands.vote_map
+--]]
