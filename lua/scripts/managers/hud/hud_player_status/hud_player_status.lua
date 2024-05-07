@@ -28,7 +28,7 @@ function HUDPlayerStatus:init(world, player)
 
 	self:_setup_player_status()
 	Managers.state.event:register(self, "event_player_status_hud_activated", "event_player_status_hud_activated", "short_term_goal_set", "event_short_term_goal_set", "awarded_rank", "event_awarded_rank")
-	Managers.persistence:reload_profile_attributes(callback(self, "cb_profile_attributes_reloaded"))
+	--Managers.persistence:reload_profile_attributes(callback(self, "cb_profile_attributes_reloaded"))
 end
 
 function HUDPlayerStatus:cb_profile_attributes_reloaded(success)
