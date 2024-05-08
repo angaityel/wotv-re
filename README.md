@@ -36,8 +36,41 @@ Should look something like this:
 ```
 "your path to wotv.exe" %command% -lobbyname "my super-duper server" -lobbymaxmembers 8
 ```
+## Hosting games
+Create a .bat file in game folder with:
+```
+wotv.exe -bundle-dir bundle -autohost -network-hash "" -no-rendering -level Forest -game-mode tdm
+```
+It's the same as hosting in-game, only without rendering.
+
+This should prevent game from crashing with 5+ players, but host won't be able to play.
+
+Maps and available modes:
+```
+Cliff - tdm, con, battle, arena, ass
+Forest - tdm, con, battle, ass
+Docks - tdm, con, battle, arena, headhunter
+Gauntlet - tdm, arena
+Monastery - tdm, arena
+Crag - tdm, arena
+Sanctuary - tdm, arena
+Icefloe - tdm, arena
+Stronghold - tdm, con, battle
+Village - tdm, domination
+Ravine - tdm, con, battle
+Tide - tdm, arena
+Ruins - arena
+Northbound - con, battle
+Strand - tdm, battle
+Outpost - tdm, domination
+Mire - tdm, battle
+```
 ## Build
 Use this version of LuaJIT for compiling lua files:
 
 https://github.com/LuaJIT/LuaJIT/releases/tag/v2.0.1-fixed
+
+To create patch files, use:
+
+https://github.com/angaityel/bundle-explorer
 
