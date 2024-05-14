@@ -83,7 +83,9 @@ function SpawnManager:set_spawn_timer(player)
 	local game = Managers.state.network:game()
 
 	if player.game_object_id and game then
-		spawn_timer = -1
+		if spawn_timer == math.huge then
+			spawn_timer = -1
+		end
 
 		GameSession.set_game_object_field(game, player.game_object_id, "spawn_timer", spawn_timer)
 	end
