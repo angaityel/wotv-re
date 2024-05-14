@@ -96,6 +96,7 @@ end
 
 function LobbyManagerSteam:custom_lobby_name()
 	local lobbyname = ""
+	local hosttype = ""
 
 	for i,v in ipairs(argv) do
 		if argv[i] == "-lobbyname" then
@@ -103,10 +104,18 @@ function LobbyManagerSteam:custom_lobby_name()
 		end
 	end
 
+	if table.find(argv, "-no-rendering") then
+		hosttype = " (server host v0.2.2)"
+	else
+		hosttype = " (game host v0.2.2)"
+	end
+
 	if lobbyname ~= "" then
+		lobbyname = lobbyname .. hosttype
 		return lobbyname
 	else
 		lobbyname = self:generate_lobby_name()
+		lobbyname = lobbyname .. hosttype
 		return lobbyname
 	end
 end
