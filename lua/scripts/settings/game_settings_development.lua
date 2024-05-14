@@ -79,10 +79,14 @@ else
 	}
 end
 
-GameSettingsDevelopment.default_time_limit = 25920000
+GameSettingsDevelopment.default_time_limit = 43200
 for i,v in ipairs(argv) do
 	if argv[i] == "-timelimit" then
-		GameSettingsDevelopment.default_time_limit = tonumber(argv[i + 1])
+		if tonumber(argv[i + 1]) > 43200 then
+			GameSettingsDevelopment.default_time_limit = 43200
+		else
+			GameSettingsDevelopment.default_time_limit = tonumber(argv[i + 1])
+		end
 	end
 end
 GameSettingsDevelopment.default_win_score = 100
