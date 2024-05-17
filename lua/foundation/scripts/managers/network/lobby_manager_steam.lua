@@ -105,9 +105,9 @@ function LobbyManagerSteam:custom_lobby_name()
 	end
 
 	if table.find(argv, "-no-rendering") then
-		hosttype = " (server host v0.2.2)"
+		hosttype = " (server host v0.2.3)"
 	else
-		hosttype = " (game host v0.2.2)"
+		hosttype = " (game host v0.2.3)"
 	end
 
 	if lobbyname ~= "" then
