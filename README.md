@@ -45,6 +45,14 @@ It's the same as hosting in-game, only without rendering.
 
 This should prevent game from crashing with 5+ players, but host won't be able to play.
 
+For map rotation change map_rotation.ini and add command to launch option:
+```
+-ini launch_server_settings
+```
+If you want random map rotation add:
+```
+-ini launch_server_settings -random-map
+```
 Maps and available modes:
 ```
 Cliff - tdm, con, battle, arena, ass
