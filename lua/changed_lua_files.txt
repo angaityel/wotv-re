@@ -7,3 +7,4 @@ scripts/managers/persistence/persistence_manager_client.lua
 scripts/managers/hud/hud_player_status/hud_player_status.lua
 scripts/boot.lua
 scripts/game_state/state_ingame.lua
+scripts/game_state/state_automatic_localhost_host.lua

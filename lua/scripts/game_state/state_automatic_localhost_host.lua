@@ -63,17 +63,25 @@ function StateAutomaticLocalhostHost:update(dt)
 
 		local drop_in_settings = Managers.state.network:drop_in_settings()
 
-		if drop_in_settings then
+		local map_rotation = script_data.settings.steam.game_server_settings.map_rotation.maps
+
+		local first_map = map_rotation[1]
+		local level_key = first_map.level
+		local game_mode_key = first_map.game_mode
+		local win_score = first_map.win_score
+		local time_limit = first_map.time_limit
+
+		if map_rotation then
 			local loading_context = {}
 
 			loading_context.state = StateLoading
-			loading_context.level_key = drop_in_settings.level_key
-			loading_context.game_mode_key = drop_in_settings.game_mode_key
-			loading_context.level_cycle = drop_in_settings.level_cycle
-			loading_context.time_limit = drop_in_settings.time_limit
-			loading_context.win_score = drop_in_settings.win_score
-			loading_context.level_cycle_count = drop_in_settings.level_cycle_count
-			loading_context.game_start_countdown = drop_in_settings.game_start_countdown
+			loading_context.level_key = level_key
+			loading_context.game_mode_key = game_mode_key
+			loading_context.level_cycle = map_rotation
+			loading_context.time_limit = time_limit
+			loading_context.win_score = win_score
+			loading_context.level_cycle_count = 1
+			loading_context.game_start_countdown = 10
 			self.parent.loading_context = loading_context
 
 			if Managers.lobby.lobby.request_data then
