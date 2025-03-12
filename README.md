@@ -19,6 +19,16 @@ Examples of how it should look like:
 "D:\Games\SteamLibrary\steamapps\common\War of the Vikings\wotv.exe" %command%
 ```
 - Launch game
+
+## Alternative method for Linux (Works for Windows too)
+
+- Download [latest release](https://github.com/angaityel/wotv-re/releases)
+- Unpack files from bundle.zip to bundle folder
+- Delete run_game.exe
+- Make copy of wotr.exe
+- Rename copy to run_game.exe
+- Run it with Proton Experimental
+
 ## Additional launch options
 Lobby name and player limit:
 - -lobbyname "server name": custom names for servers.
