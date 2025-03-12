@@ -6,4 +6,3 @@ foundation/scripts/managers/network/lobby_manager_steam.lua
 scripts/managers/persistence/persistence_manager_client.lua
 scripts/managers/hud/hud_player_status/hud_player_status.lua
 scripts/managers/command_parser/command_parser_manager.lua
-scripts/game_state/state_ingame.lua

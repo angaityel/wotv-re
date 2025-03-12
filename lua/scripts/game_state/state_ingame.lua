@@ -34,11 +34,6 @@ require("foundation/scripts/util/spline_curve")
 
 StateIngame = class(StateIngame)
 
-local argv = {
-	Application.argv()
-}
-
-
 function StateIngame:on_enter()
 	HUDHelper:update_resolution()
 	MenuHelper:update_resolution()
@@ -659,20 +654,7 @@ function StateIngame:_check_exit(t)
 
 		local next_level_settings = network_manager:next_level_settings()
 
-		if table.find(argv, "-ini") then
-			if table.find(argv, "-random-map") then
-				Managers.state.hud:output_console_text("Loading next level: Random", Vector3(163, 28, 166))
-			else
-				local level_cycle = script_data.settings.map_rotation.maps
-
-				local next_level = level_cycle[self.parent.loading_context.level_cycle_count]
-				local level_key = next_level.level
-				local game_mode_key = next_level.game_mode
-				Managers.state.hud:output_console_text("Loading next level: " .. L(LevelSettings[level_key].display_name) .. " ( " .. L(GameModeSettings[game_mode_key].display_name) .. " )", Vector3(163, 28, 166))
-			end
-		else
-			Managers.state.hud:output_console_text("Loading next level: " .. L(LevelSettings[next_level_settings.level_key].display_name) .. " ( " .. L(GameModeSettings[next_level_settings.game_mode_key].display_name) .. " )", Vector3(163, 28, 166))
-		end
+		Managers.state.hud:output_console_text("Loading next level: " .. L(LevelSettings[next_level_settings.level_key].display_name) .. " ( " .. L(GameModeSettings[next_level_settings.game_mode_key].display_name) .. " )", Vector3(163, 28, 166))
 		Managers.transition:fade_in(MenuSettings.transitions.fade_in_speed, nil)
 	end
 
@@ -722,46 +704,10 @@ function StateIngame:_check_exit(t)
 		elseif self.exit_type == "load_next_level" then
 			local next_level_settings = network_manager:next_level_settings()
 
-
-			if table.find(argv, "-ini") then
-				if table.find(argv, "-random-map") then
-					local next_level_settings_random = script_data.settings.map_rotation.maps[math.random(1, #script_data.settings.map_rotation.maps)] 
-					self.parent.loading_context.level_key = next_level_settings_random.level
-					self.parent.loading_context.game_mode_key = next_level_settings_random.game_mode
-					self.parent.loading_context.time_limit = next_level_settings_random.time_limit
-					self.parent.loading_context.win_score = next_level_settings_random.win_score
-					self.parent.loading_context.game_mode_size = next_level_settings_random.game_mode_size
-				else
-					local level_cycle = script_data.settings.map_rotation.maps
-					local level_cycle_length = #level_cycle
-					local level_cycle_count = self.parent.loading_context.level_cycle_count % level_cycle_length
-
-					if level_cycle_count == 0 then
-						level_cycle_count = level_cycle_length
-					end
-
-					self.parent.loading_context.level_cycle = level_cycle
-
-					local next_level = level_cycle[level_cycle_count]
-					local level_key = next_level.level
-					local game_mode_key = next_level.game_mode
-					local win_score = next_level.win_score
-					local time_limit = next_level.time_limit
-					local game_mode_size = next_level.game_mode_size
-
-					self.parent.loading_context.level_key = level_key
-					self.parent.loading_context.game_mode_key = game_mode_key
-					self.parent.loading_context.time_limit = time_limit
-					self.parent.loading_context.win_score = win_score
-					self.parent.loading_context.game_mode_size = game_mode_size
-				end
-			else
-				self.parent.loading_context.level_key = next_level_settings.level_key
-				self.parent.loading_context.game_mode_key = next_level_settings.game_mode_key
-				self.parent.loading_context.time_limit = next_level_settings.time_limit
-				self.parent.loading_context.win_score = next_level_settings.win_score
-			end
-
+			self.parent.loading_context.level_key = next_level_settings.level_key
+			self.parent.loading_context.game_mode_key = next_level_settings.game_mode_key
+			self.parent.loading_context.time_limit = next_level_settings.time_limit
+			self.parent.loading_context.win_score = next_level_settings.win_score
 			self.parent.loading_context.game_start_countdown = next_level_settings.game_start_countdown
 
 			print("[StateIngame] Transition to StateLoading on \"load_next_level\"")
