@@ -5,4 +5,4 @@ scripts/managers/news_ticker/news_ticker_manager.lua
 foundation/scripts/managers/network/lobby_manager_steam.lua
 scripts/managers/persistence/persistence_manager_client.lua
 scripts/managers/hud/hud_player_status/hud_player_status.lua
-scripts/managers/command_parser/command_parser_manager.lua
+scripts/boot.lua

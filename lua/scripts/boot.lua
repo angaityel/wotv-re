@@ -185,6 +185,9 @@ end
 function Postman:_init_managers()
 	self:_init_localizer()
 	self:_init_lobby_manager()
+	local args = {
+		Application.argv()
+	}
 
 	local has_steam = rawget(_G, "Steam")
 	local is_dedicated_server = script_data.settings.dedicated_server
@@ -201,6 +204,13 @@ function Postman:_init_managers()
 		AntiCheatClient.initialize(11, Postman.anti_cheat_key)
 	else
 		Postman.anti_cheat_key = Application.make_hash()
+	end
+
+	if table.find(args, "-no-rendering") then
+		local server_settings = Managers.lobby.game_server_settings or {
+			server_init_settings = {}
+		}
+		Managers.admin = AdminManager:new(server_settings)
 	end
 
 	self:_init_backend()
