@@ -2982,7 +2982,7 @@ function GameNetworkManager:_apply_damage(attacker_player_id, attacker_game_obje
 	local attacker = Managers.player:player(self:temp_player_index(attacker_player_id))
 	local attacker_unit = self._units[attacker_game_object_id]
 	local damage_range_type = NetworkLookup.damage_range_types[damage_range_type]
-	local friendly_fire_multiplier = Managers.state.team:friendly_fire_multiplier(attacker_unit, victim_unit, damage_range_type)
+	local friendly_fire_multiplier = 1 --Managers.state.team:friendly_fire_multiplier(attacker_unit, victim_unit, damage_range_type)
 	local damage = friendly_fire_multiplier * damage
 	local mirrored = false
 	local damage_extension = ScriptUnit.extension(victim_unit, "damage_system")
@@ -2994,13 +2994,13 @@ function GameNetworkManager:_apply_damage(attacker_player_id, attacker_game_obje
 	if attack_name == "nil" then
 		-- block empty
 	end
-
+--[[
 	if is_on_same_team and mirror_damage and is_alive then
 		mirrored = true
 		attacker_unit, victim_unit = victim_unit, attacker_unit
 		damage_extension = ScriptUnit.extension(victim_unit, "damage_system")
 	end
-
+--]]
 	damage_extension:network_recieve_add_damage(attacker, attacker_unit, NetworkLookup.damage_types[damage_type], damage, position, normal, damage_range_type, NetworkLookup.gear_names[gear_name_id], attack_name, NetworkLookup.hit_zones[hit_zone_id], impact_direction, real_damage or damage, range, riposte, mirrored)
 end
 
