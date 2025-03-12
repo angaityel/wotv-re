@@ -189,6 +189,13 @@ function StateIngame:_setup_world()
 	local apex_disabled = Application.user_setting("disable_apex_cloth") ~= true or script_data.settings.dedicated_server
 	local has_apex = not not apex_disabled
 
+	local argv = {
+		Application.argv()
+	}
+	if table.find(argv, "-no-rendering") then
+		has_apex = false
+	end
+
 	if has_apex then
 		self.world = Managers.world:create_world(self.world_name, shading_environment, shading_callback, layer, Application.APEX_LOD_RESOURCE_BUDGET, Application.user_setting("apex_lod_resource_budget") or ApexClothQuality.high.apex_lod_resource_budget)
 	else
