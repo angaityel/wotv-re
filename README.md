@@ -25,7 +25,7 @@ Examples of how it should look like:
 - Download [latest release](https://github.com/angaityel/wotv-re/releases)
 - Unpack files from bundle.zip to bundle folder
 - Delete run_game.exe
-- Make copy of wotr.exe
+- Make copy of wotv.exe
 - Rename copy to run_game.exe
 - Run it with Proton Experimental
 
@@ -55,14 +55,29 @@ It's the same as hosting in-game, only without rendering.
 
 This should prevent game from crashing with 5+ players, but host won't be able to play.
 
-For map rotation change map_rotation.ini and add command to launch option:
+For map rotation change map_rotation.ini and add command to launch options:
 ```
 -ini launch_server_settings
 ```
-If you want random map rotation add:
+
+First map in map_rotation.ini must be specified in launch options. For example:
 ```
--ini launch_server_settings -random-map
+maps = [
+	{
+		game_mode = "tdm"
+		level = "Monastery"
+		game_mode_size = 64
+		time_limit = 1234
+		win_score = 100
+	}
+	{
+	...
 ```
+Then launch options should look like this:
+```
+wotv.exe -bundle-dir bundle -autohost -network-hash "" -no-rendering -level Monastery -game-mode tdm -timelimit 1234 -lobbyname "server name" -ini launch_server_settings
+```
+
 Maps and available modes:
 ```
 Cliff - tdm, con, battle, arena, ass
