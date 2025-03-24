@@ -206,7 +206,7 @@ function Postman:_init_managers()
 		Postman.anti_cheat_key = Application.make_hash()
 	end
 
-	if table.find(args, "-no-rendering") then
+	if table.find(args, "-autohost") then
 		local server_settings = Managers.lobby.game_server_settings or {
 			server_init_settings = {}
 		}
