@@ -192,7 +192,7 @@ function StateIngame:_setup_world()
 	local argv = {
 		Application.argv()
 	}
-	if table.find(argv, "-no-rendering") then
+	if table.find(argv, "-autohost") then
 		has_apex = false
 	end
 
