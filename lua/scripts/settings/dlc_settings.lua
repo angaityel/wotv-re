@@ -21,16 +21,34 @@ DLCSettings = {
 	full_game = function()
 		return true
 	end,
-	yogscast = app_id_check(AppIDSettings.dlc.yogscast),
-	shieldmaiden_dlc_helmet = app_id_check(AppIDSettings.dlc.shieldmaiden_dlc_helmet),
-	premium = app_id_check(AppIDSettings.dlc.premium),
-	beagle = app_id_check(AppIDSettings.dlc.beagle),
-	early_access = app_id_check(AppIDSettings.dlc.early_access),
-	vanguard = app_id_check(AppIDSettings.dlc.vanguard),
-	berserk = app_id_check(AppIDSettings.dlc.berserk),
-	premium_or_beagle = function()
-		return app_id_check(AppIDSettings.dlc.premium)() or app_id_check(AppIDSettings.dlc.beagle)()
+	yogscast = function()
+		return true
 	end,
-	coins_gift = app_id_check(AppIDSettings.dlc.coins_gift),
-	coins_retail_bonus = app_id_check(AppIDSettings.dlc.retail_bonus)
+	shieldmaiden_dlc_helmet = function()
+		return true
+	end,
+	premium = function()
+		return true
+	end,
+	beagle = function()
+		return true
+	end,
+	early_access = function()
+		return true
+	end,
+	vanguard = function()
+		return true
+	end,
+	berserk = function()
+		return true
+	end,
+	premium_or_beagle = function()
+		return true
+	end,
+	coins_gift = function()
+		return true
+	end,
+	coins_retail_bonus = function()
+		return true
+	end
 }
