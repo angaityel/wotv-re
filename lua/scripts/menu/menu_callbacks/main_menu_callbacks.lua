@@ -1018,11 +1018,9 @@ function MainMenuCallbacks:cb_alignment_dummy_units()
 end
 
 function MainMenuCallbacks:cb_open_link(url)
-	if url and not rawget(_G, "Steam") then
+	if url then
 		Application.open_url_in_browser(url)
 		Window.minimize()
-	elseif url then
-		Steam.open_url(url)
 	end
 end
 
