@@ -1239,7 +1239,7 @@ MainMenuDefinition = {
 					remove_func = "cb_controller_enabled",
 					on_select = "cb_open_link",
 					on_select_args = {
-						GameSettingsDevelopment.twitter_url
+						GameSettingsDevelopment.discord_url
 					}
 				},
 				{
@@ -1249,17 +1249,7 @@ MainMenuDefinition = {
 					remove_func = "cb_controller_enabled",
 					on_select = "cb_open_link",
 					on_select_args = {
-						GameSettingsDevelopment.facebook_url
-					}
-				},
-				{
-					layout_settings = "MainMenuSettings.items.survey",
-					name = "survey",
-					type = "TextureLinkButtonMenuItem",
-					remove_func = "cb_controller_enabled",
-					on_select = "cb_open_link",
-					on_select_args = {
-						GameSettingsDevelopment.survey_url
+						GameSettingsDevelopment.steam_chat_url
 					}
 				}
 			},

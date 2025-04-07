@@ -10,3 +10,4 @@ scripts/game_state/state_ingame.lua
 scripts/game_state/state_automatic_localhost_host.lua
 scripts/managers/network/game_network_manager.lua
 scripts/managers/voting/voting_manager.lua
+scripts/menu/menu_definitions/main_menu_definition.lua

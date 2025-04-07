@@ -101,6 +101,8 @@ for i,v in ipairs(argv) do
 end
 GameSettingsDevelopment.buy_game_url = "http://www.waroftherosesvikings.com/buy"
 GameSettingsDevelopment.twitter_url = "http://twitter.com/WaroftheVikings"
+GameSettingsDevelopment.discord_url = "https://discord.gg/aHVG9MKjqv"
+GameSettingsDevelopment.steam_chat_url = "https://steamcommunity.com/chat/invite/PLDf5EU6"
 GameSettingsDevelopment.facebook_url = "http://www.facebook.com/WaroftheVikings"
 GameSettingsDevelopment.survey_url = "http://steamcommunity.com/app/234530/guides/"
 GameSettingsDevelopment.quicklaunch_params = GameSettingsDevelopment.quicklaunch_params or {}
