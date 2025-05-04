@@ -47,6 +47,12 @@ function create_headhunter_profiles(profiles)
 			profile_gear.shield = nil
 		end
 
+		local dagger = profile_gear.dagger
+
+		if dagger then
+			profile_gear.dagger = nil
+		end
+
 		local secondary = profile_gear.secondary
 
 		if secondary then
