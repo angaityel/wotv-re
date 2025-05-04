@@ -728,6 +728,12 @@ function PlayerUnitInventory:set_gear_wielded(slot_name, wielded, ignore_sound, 
 	if can_dual_wield and other_slot then
 		dual_wielding = true
 	end
+	
+	local game_mode_key = Managers.state.game_mode:game_mode_key()
+
+	if game_mode_key == "headhunter" then
+		dual_wielding = false
+	end
 
 	local gear = self:gear(slot_name)
 
