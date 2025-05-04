@@ -456,7 +456,7 @@ local function add_custom_profile(profile_template, display_name, unlock_key, in
 	PlayerProfiles[index] = profile
 end
 
-local CUSTOM_SLOTS = 4
+local CUSTOM_SLOTS = 50
 local CUSTOM_SLOTS_VANGUARD = 1
 local CUSTOM_SLOTS_VANGUARD_OWNER = 2
 local CUSTOM_SLOTS_BERSERKER = 1
