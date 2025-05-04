@@ -56,7 +56,7 @@ function create_headhunter_profiles(profiles)
 		local primary = profile_gear.primary
 
 		if primary then
-			primary.name = "medium_headhunter_throwing_spear"
+			primary.name = "headhunter_throwing_spear"
 			primary.wielded = true
 		end
 
