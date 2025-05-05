@@ -715,6 +715,8 @@ end
 StatsContexts.player.player_stats.data = {
 	arena_round_won = 0,
 	domination_round_played = 0,
+	headhunter_round_played = 0,
+	headhunter_round_won = 0,
 	con_round_played = 0,
 	battle_round_played = 0,
 	domination_round_won = 0,
