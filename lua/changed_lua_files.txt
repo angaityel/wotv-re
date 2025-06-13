@@ -15,3 +15,4 @@ scripts/menu/menu_callbacks/main_menu_callbacks.lua
 scripts/settings/dlc_settings.lua
 scripts/settings/player_profiles.lua
 scripts/unit_extensions/default_player_unit/inventory/player_unit_inventory.lua
+scripts/managers/stats/stats_contexts.lua
