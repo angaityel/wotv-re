@@ -653,3 +653,9 @@ function Commands:vote_map(map_pair, player)
 end
 
 Commands.vote_level = Commands.vote_map
+Commands.v = Commands.vote_map
+Commands.vote = Commands.vote_map
+Commands.list_maps = Commands.list_levels
+Commands.list = Commands.list_levels
+Commands.maps = Commands.list_levels
+Commands.l = Commands.list_levels
