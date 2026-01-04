@@ -787,6 +787,292 @@ LevelSettings = {
 			texture_1366 = "ravenspurn_loading_1920"
 		}
 	},
+	dom_whitebox_2 = {
+		package_name = "resource_packages/levels/dom_whitebox_2",
+		game_server_map_name = "dom_whitebox_2",
+		map_id = 21,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_activate",
+		show_in_server_browser = true,
+		sort_index = 20,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_dom_whitebox_2",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_monastery_battle_music",
+		executed_setting = "executed",
+		loading_background = "outpost_load",
+		music = "Play_monastery_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/dom_whitebox_2/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.domination,
+			GameModeSettings.tdm,
+			GameModeSettings.con
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	dom_whitebox_3 = {
+		package_name = "resource_packages/levels/dom_whitebox_3",
+		game_server_map_name = "dom_whitebox_3",
+		map_id = 22,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_activate",
+		show_in_server_browser = true,
+		sort_index = 21,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_dom_whitebox_3",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_monastery_battle_music",
+		executed_setting = "executed",
+		loading_background = "outpost_load",
+		music = "Play_monastery_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/dom_whitebox_3/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.domination,
+			GameModeSettings.tdm,
+			GameModeSettings.con
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Market = {
+		package_name = "resource_packages/levels/market_01",
+		game_server_map_name = "market",
+		map_id = 23,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 22,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_market",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_york_battle_music",
+		executed_setting = "executed",
+		loading_background = "market_loading_screen",
+		music = "Play_york_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/market_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm,
+			GameModeSettings.battle,
+			GameModeSettings.arena,
+			GameModeSettings.con
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Holmgang = {
+		package_name = "resource_packages/levels/holmgang_01",
+		game_server_map_name = "holmgang",
+		map_id = 24,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 23,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_holmgang",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_holmgang_battle_music",
+		executed_setting = "executed",
+		loading_background = "holmgang_loading_screen",
+		music = "Play_holmgang_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/holmgang_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Desert = {
+		package_name = "resource_packages/levels/desert_01",
+		game_server_map_name = "desert",
+		map_id = 25,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 24,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_desert",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_cliff_battle_music",
+		executed_setting = "executed",
+		loading_background = "desert_loading_screen",
+		music = "Play_cliff_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/desert_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Cove = {
+		package_name = "resource_packages/levels/cove_01",
+		game_server_map_name = "cove",
+		map_id = 26,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 25,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_cove",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_york_battle_music",
+		executed_setting = "executed",
+		loading_background = "cove_loading_screen",
+		music = "Play_york_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/cove_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm,
+			GameModeSettings.battle,
+			GameModeSettings.con
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Entryway = {
+		package_name = "resource_packages/levels/entryway_01",
+		game_server_map_name = "entryway",
+		map_id = 27,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 26,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_entryway",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_monastery_battle_music",
+		executed_setting = "executed",
+		loading_background = "outpost_load",
+		music = "Play_monastery_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/entryway_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.domination,
+			GameModeSettings.tdm,
+			GameModeSettings.battle,
+			GameModeSettings.arena,
+			GameModeSettings.con
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Victor = {
+		package_name = "resource_packages/levels/victor",
+		game_server_map_name = "victor",
+		map_id = 28,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 27,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_victor",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_cliff_battle_music",
+		executed_setting = "executed",
+		loading_background = "victor_loading_screen",
+		music = "Play_cliff_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/victor/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm,
+			GameModeSettings.battle
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
 	main_menu_whitebox = {
 		ui_description = "level_description_missing",
 		level_name = "levels/menu/main_menu_whitebox/world",
