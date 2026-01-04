@@ -34,6 +34,10 @@ require("foundation/scripts/util/spline_curve")
 
 StateIngame = class(StateIngame)
 
+local argv = {
+	Application.argv()
+}
+
 function StateIngame:on_enter()
 	HUDHelper:update_resolution()
 	MenuHelper:update_resolution()
@@ -481,6 +485,10 @@ function StateIngame:update(dt, t)
 			local level_cycle = self.parent.loading_context.level_cycle
 			local level_cycle_length = #level_cycle
 			local level_cycle_count = self.parent.loading_context.level_cycle_count % level_cycle_length + 1
+
+			if table.find(argv, "-random-map") then
+				level_cycle_count = math.random(1, level_cycle_length)
+			end
 
 			self.parent.loading_context.level_cycle_count = level_cycle_count
 
