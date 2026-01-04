@@ -80,8 +80,8 @@ wotv.exe -bundle-dir bundle -autohost -network-hash "" -no-rendering -level Mona
 
 Maps and available modes:
 ```
-Cliff - tdm, con, battle, arena, ass
-Forest - tdm, con, battle, ass
+Cliff - tdm, con, battle, arena
+Forest - tdm, con, battle
 Docks - tdm, con, battle, arena, headhunter
 Gauntlet - tdm, arena
 Monastery - tdm, arena
@@ -97,6 +97,11 @@ Northbound - con, battle
 Strand - tdm, battle
 Outpost - tdm, domination
 Mire - tdm, battle
+Market - tdm, con, arena, battle
+Holmgang - tdm
+Desert - tdm
+Cove - tdm, con, battle
+Victor - tdm, battle
 ```
 ## Build
 Use this version of LuaJIT for compiling lua files:
