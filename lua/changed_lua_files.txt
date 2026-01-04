@@ -16,3 +16,4 @@ scripts/settings/dlc_settings.lua
 scripts/settings/player_profiles.lua
 scripts/unit_extensions/default_player_unit/inventory/player_unit_inventory.lua
 scripts/managers/stats/stats_contexts.lua
+scripts/managers/game_mode/game_mode_manager.lua

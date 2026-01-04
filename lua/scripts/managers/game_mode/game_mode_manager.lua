@@ -652,9 +652,9 @@ function GameModeManager:trigger_end(round_end, t)
 
 		Level.trigger_event(level, side .. "_win")
 	elseif round_end then
-		self._end_timer = t + 6
+		self._end_timer = t - 4
 	else
-		self._end_timer = t + 13
+		self._end_timer = t + 5
 	end
 end
 
