@@ -20,3 +20,4 @@ scripts/managers/game_mode/game_mode_manager.lua
 scripts/menu/menu_definitions/main_menu_settings_1366.lua
 scripts/menu/menu_definitions/main_menu_settings_1920.lua
 scripts/settings/level_settings.lua
+scripts/settings/game_mode_settings.lua
