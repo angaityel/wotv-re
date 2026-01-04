@@ -164,13 +164,8 @@ MainMenuDefinition = {
 					text = "main_menu_play_online",
 					disabled_func = "cb_steam_server_browser_disabled",
 					type = "HeaderItem",
-					layout_settings = MainMenuSettings.items.large_centered_text,
+					layout_settings = MainMenuSettings.items.centered_text,
 					page = ServerBrowserPage
-				},
-				{
-					disabled = true,
-					type = "TextureMenuItem",
-					layout_settings = MainMenuSettings.items.delimiter_texture
 				},
 				{
 					text = "menu_how_to_play",
@@ -1225,6 +1220,7 @@ MainMenuDefinition = {
 									layout_settings = "MainMenuSettings.items.centered_text",
 									disabled = true,
 									on_enter_text = "cb_page_name",
+									text = GameSettingsDevelopment.fix_version,
 									type = "HeaderItem",
 									callback_object = "page"
 								}
@@ -1233,8 +1229,14 @@ MainMenuDefinition = {
 					}
 				},
 				{
-					layout_settings = "MainMenuSettings.items.twitter",
-					name = "twitter",
+					disabled = true,
+					text = GameSettingsDevelopment.fix_version,
+					type = "HeaderItem",
+					layout_settings = MainMenuSettings.items.centered_text,
+				},
+				{
+					layout_settings = "MainMenuSettings.items.discord",
+					name = "discord",
 					type = "TextureLinkButtonMenuItem",
 					remove_func = "cb_controller_enabled",
 					on_select = "cb_open_link",
@@ -1243,8 +1245,8 @@ MainMenuDefinition = {
 					}
 				},
 				{
-					layout_settings = "MainMenuSettings.items.facebook",
-					name = "facebook",
+					layout_settings = "MainMenuSettings.items.steam_chat",
+					name = "steam_chat",
 					type = "TextureLinkButtonMenuItem",
 					remove_func = "cb_controller_enabled",
 					on_select = "cb_open_link",

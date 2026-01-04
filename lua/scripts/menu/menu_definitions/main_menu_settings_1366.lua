@@ -2886,6 +2886,29 @@ MainMenuSettings.items.twitter[1366][768] = MainMenuSettings.items.twitter[1366]
 	indentation = 0.04,
 	texture_height = 100
 }
+MainMenuSettings.items.discord = MainMenuSettings.items.discord or {}
+MainMenuSettings.items.discord[1366] = MainMenuSettings.items.discord[1366] or {}
+MainMenuSettings.items.discord[1366][768] = MainMenuSettings.items.discord[1366][768] or {
+	texture = "discord",
+	highlight_multiplier = 0.3,
+	texture_align = "bottom_left",
+	texture_width = 50,
+	highlight_time = 0.35,
+	indentation = 0.04,
+	texture_height = 100
+}
+MainMenuSettings.items.steam_chat = MainMenuSettings.items.steam_chat or {}
+MainMenuSettings.items.steam_chat[1366] = MainMenuSettings.items.steam_chat[1366] or {}
+MainMenuSettings.items.steam_chat[1366][768] = MainMenuSettings.items.steam_chat[1366][768] or {
+	texture_extra_offset = 60,
+	texture = "steam_chat",
+	texture_align = "bottom_left",
+	texture_width = 50,
+	highlight_multiplier = 0.3,
+	highlight_time = 0.35,
+	indentation = 0.04,
+	texture_height = 100
+}
 MainMenuSettings.items.survey = MainMenuSettings.items.survey or {}
 MainMenuSettings.items.survey[1366] = MainMenuSettings.items.survey[1366] or {}
 MainMenuSettings.items.survey[1366][768] = MainMenuSettings.items.survey[1366][768] or {

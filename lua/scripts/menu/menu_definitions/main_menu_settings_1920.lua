@@ -3084,6 +3084,29 @@ MainMenuSettings.items.facebook[1680][1050] = MainMenuSettings.items.facebook[16
 	indentation = 0.04,
 	texture_height = 100
 }
+MainMenuSettings.items.discord = MainMenuSettings.items.discord or {}
+MainMenuSettings.items.discord[1680] = MainMenuSettings.items.discord[1680] or {}
+MainMenuSettings.items.discord[1680][1050] = MainMenuSettings.items.discord[1680][1050] or {
+	texture = "discord",
+	highlight_multiplier = 0.3,
+	texture_align = "bottom_left",
+	texture_width = 50,
+	highlight_time = 0.35,
+	indentation = 0.04,
+	texture_height = 100
+}
+MainMenuSettings.items.steam_chat = MainMenuSettings.items.steam_chat or {}
+MainMenuSettings.items.steam_chat[1680] = MainMenuSettings.items.steam_chat[1680] or {}
+MainMenuSettings.items.steam_chat[1680][1050] = MainMenuSettings.items.steam_chat[1680][1050] or {
+	texture_extra_offset = 60,
+	texture = "steam_chat",
+	texture_align = "bottom_left",
+	texture_width = 50,
+	highlight_multiplier = 0.3,
+	highlight_time = 0.35,
+	indentation = 0.04,
+	texture_height = 100
+}
 MainMenuSettings.items.pdx_login_input = MainMenuSettings.items.pdx_login_input or {}
 MainMenuSettings.items.pdx_login_input[1680] = {}
 MainMenuSettings.items.pdx_login_input[1680][1050] = {
