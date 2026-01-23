@@ -22,3 +22,12 @@ scripts/menu/menu_definitions/main_menu_settings_1920.lua
 scripts/settings/level_settings.lua
 scripts/settings/game_mode_settings.lua
 scripts/managers/command_parser/command_parser_manager.lua
+scripts/managers/game_mode/game_modes/game_mode_assault.lua
+scripts/unit_extensions/objectives/payload_base.lua
+scripts/unit_extensions/objectives/payload_client.lua
+scripts/unit_extensions/objectives/payload_server.lua
+scripts/settings/payload_speed_settings.lua
+scripts/entity_system/entity_system.lua
+scripts/helpers/game_mode_helper.lua
+scripts/settings/game_mode_objectives.lua
+scripts/settings/announcements.lua

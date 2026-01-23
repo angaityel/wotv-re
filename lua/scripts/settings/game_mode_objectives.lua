@@ -91,5 +91,11 @@ GameModeObjectives = {
 	sp_tutorial_description_objective_capture = {},
 	sp_tutorial_name_objective_completed = {
 		announcement = "sp_tutorial_name_objective_completed"
+	},
+	attack_cart = {
+		announcement = "assault_attack_cart"
+	},
+	defend_cart = {
+		announcement = "assault_defend_cart"
 	}
 }

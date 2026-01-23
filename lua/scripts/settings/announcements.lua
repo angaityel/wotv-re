@@ -722,5 +722,13 @@ Announcements = {
 			}
 		},
 		container_sound_events = {}
-	}
+	},
+	assault_attack_cart = {
+		unique_id = "objective_description",
+		layout_settings = HUDSettings.announcements.objective
+	},
+	assault_defend_cart = {
+		unique_id = "objective_description",
+		layout_settings = HUDSettings.announcements.objective
+	},
 }

@@ -110,6 +110,21 @@ GameModeSettings.tdm.ui_description = {
 GameModeSettings.tdm.rewards.confirmed_kill = "tdm_confirmed_kill"
 GameModeSettings.tdm.rewards.match_played = "tdm_match_played"
 GameModeSettings.tdm.rewards.match_won = "tdm_match_won"
+GameModeSettings.ass = table.clone(GameModeSettings.base)
+GameModeSettings.ass.key = "ass"
+GameModeSettings.ass.display_name = "gm_assault"
+GameModeSettings.ass.class_name = "GameModeAssault"
+GameModeSettings.ass.time_limit = 300
+GameModeSettings.ass.object_sets = {
+	gm_assault = true
+}
+GameModeSettings.ass.visible = true
+GameModeSettings.ass.tagging_objectives = false
+GameModeSettings.ass.ui_description = {
+	unassigned = "gm_description_unassigned_assault",
+	defenders = "gm_description_defenders_assault",
+	attackers = "gm_description_attackers_assault"
+}
 GameModeSettings.battle = table.clone(GameModeSettings.base)
 GameModeSettings.battle.key = "battle"
 GameModeSettings.battle.class_name = "GameModeBattle"
