@@ -1073,6 +1073,73 @@ LevelSettings = {
 			texture_1366 = "ravenspurn_loading_1920"
 		}
 	},
+	Ravenspurn = {
+		package_name = "resource_packages/levels/ravenspurn_01",
+		game_server_map_name = "Ravenspurn",
+		map_id = 29,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 28,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		display_name = "level_ravenspurn_01",
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		stop_music = "Stop_cliff_battle_music",
+		executed_setting = "executed",
+		loading_background = "ravenspurn_loading_screen",
+		music = "Play_cliff_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/ravenspurn_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.ass
+		},
+		level_particle_effects = {
+		},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Seasick = {
+		package_name = "resource_packages/levels/seasick_01",
+		game_server_map_name = "Seasick",
+		map_id = 30,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = false,
+		sort_index = 29,
+		last_stand_setting = "bleeding",
+		visible = true,
+		single_player = false,
+		ghost_mode_setting = "ghost_mode",
+		ui_description = "level_description_mp_island_01",
+		display_name = "level_seasick",
+		stop_music = "Stop_york_battle_music",
+		music = "Play_york_battle_music",
+		executed_setting = "executed",
+		loading_background = "seasick_loading_screen",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/seasick_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm
+		},
+		level_particle_effects = {},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
 	main_menu_whitebox = {
 		ui_description = "level_description_missing",
 		level_name = "levels/menu/main_menu_whitebox/world",
