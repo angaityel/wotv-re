@@ -787,9 +787,9 @@ LevelSettings = {
 			texture_1366 = "ravenspurn_loading_1920"
 		}
 	},
-	dom_whitebox_2 = {
+	Shore = {
 		package_name = "resource_packages/levels/dom_whitebox_2",
-		game_server_map_name = "dom_whitebox_2",
+		game_server_map_name = "Shore",
 		map_id = 21,
 		deserter_setting = "deserting",
 		on_spawn_flow_event = "cold_breath_activate",
@@ -798,12 +798,12 @@ LevelSettings = {
 		last_stand_setting = "bleeding",
 		visible = true,
 		single_player = false,
-		display_name = "level_dom_whitebox_2",
+		display_name = "level_shore",
 		ghost_mode_setting = "ghost_mode",
 		ui_description = "level_description_mp_island_01",
 		stop_music = "Stop_monastery_battle_music",
 		executed_setting = "executed",
-		loading_background = "outpost_load",
+		loading_background = "shore_load",
 		music = "Play_monastery_battle_music",
 		knocked_down_setting = "knocked_down",
 		level_name = "levels/dom_whitebox_2/world",
@@ -812,8 +812,7 @@ LevelSettings = {
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
 			GameModeSettings.domination,
-			GameModeSettings.tdm,
-			GameModeSettings.con
+			GameModeSettings.tdm
 		},
 		level_particle_effects = {
 		},
@@ -821,11 +820,27 @@ LevelSettings = {
 		loading_screen_preview = {
 			texture_1920 = "ravenspurn_loading_1920",
 			texture_1366 = "ravenspurn_loading_1920"
+		},
+		minimap = {
+			scale = 1,
+			rotation = 3.93 - math.pi * 0.5,
+			anchor = {
+				46,
+				-41
+			},
+			fade = {
+				outer = 85,
+				inner = 60
+			},
+			spawn_points = {
+				red = Vector3Box(36.05, -92.018, 48.324),
+				white = Vector3Box(-4, -53, 42)
+			}
 		}
 	},
-	dom_whitebox_3 = {
+	Roman_Remnants = {
 		package_name = "resource_packages/levels/dom_whitebox_3",
-		game_server_map_name = "dom_whitebox_3",
+		game_server_map_name = "Roman_Remnants",
 		map_id = 22,
 		deserter_setting = "deserting",
 		on_spawn_flow_event = "cold_breath_activate",
@@ -834,12 +849,12 @@ LevelSettings = {
 		last_stand_setting = "bleeding",
 		visible = true,
 		single_player = false,
-		display_name = "level_dom_whitebox_3",
+		display_name = "level_roman_remnants",
 		ghost_mode_setting = "ghost_mode",
 		ui_description = "level_description_mp_island_01",
 		stop_music = "Stop_monastery_battle_music",
 		executed_setting = "executed",
-		loading_background = "outpost_load",
+		loading_background = "roman_remnants_load",
 		music = "Play_monastery_battle_music",
 		knocked_down_setting = "knocked_down",
 		level_name = "levels/dom_whitebox_3/world",
@@ -848,8 +863,7 @@ LevelSettings = {
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
 			GameModeSettings.domination,
-			GameModeSettings.tdm,
-			GameModeSettings.con
+			GameModeSettings.tdm
 		},
 		level_particle_effects = {
 		},
@@ -857,6 +871,22 @@ LevelSettings = {
 		loading_screen_preview = {
 			texture_1920 = "ravenspurn_loading_1920",
 			texture_1366 = "ravenspurn_loading_1920"
+		},
+		minimap = {
+			scale = 1,
+			rotation = 3.93 - math.pi * 0.5,
+			anchor = {
+				46,
+				-41
+			},
+			fade = {
+				outer = 85,
+				inner = 60
+			},
+			spawn_points = {
+				red = Vector3Box(36.05, -92.018, 48.324),
+				white = Vector3Box(-4, -53, 42)
+			}
 		}
 	},
 	Market = {
@@ -886,6 +916,7 @@ LevelSettings = {
 			GameModeSettings.tdm,
 			GameModeSettings.battle,
 			GameModeSettings.arena,
+			GameModeSettings.headhunter,
 			GameModeSettings.con
 		},
 		level_particle_effects = {
@@ -954,7 +985,9 @@ LevelSettings = {
 		sp_requirement_id = 0,
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
-			GameModeSettings.tdm
+			GameModeSettings.tdm,
+			GameModeSettings.battle,
+			GameModeSettings.con
 		},
 		level_particle_effects = {
 		},
@@ -990,6 +1023,7 @@ LevelSettings = {
 		game_modes = {
 			GameModeSettings.tdm,
 			GameModeSettings.battle,
+			GameModeSettings.arena,
 			GameModeSettings.con
 		},
 		level_particle_effects = {
@@ -1016,7 +1050,7 @@ LevelSettings = {
 		ui_description = "level_description_mp_island_01",
 		stop_music = "Stop_monastery_battle_music",
 		executed_setting = "executed",
-		loading_background = "outpost_load",
+		loading_background = "entryway_load",
 		music = "Play_monastery_battle_music",
 		knocked_down_setting = "knocked_down",
 		level_name = "levels/entryway_01/world",
@@ -1025,10 +1059,7 @@ LevelSettings = {
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
 			GameModeSettings.domination,
-			GameModeSettings.tdm,
-			GameModeSettings.battle,
-			GameModeSettings.arena,
-			GameModeSettings.con
+			GameModeSettings.tdm
 		},
 		level_particle_effects = {
 		},
@@ -1036,6 +1067,22 @@ LevelSettings = {
 		loading_screen_preview = {
 			texture_1920 = "ravenspurn_loading_1920",
 			texture_1366 = "ravenspurn_loading_1920"
+		},
+		minimap = {
+			scale = 1,
+			rotation = 3.93 - math.pi * 0.5,
+			anchor = {
+				46,
+				-41
+			},
+			fade = {
+				outer = 85,
+				inner = 60
+			},
+			spawn_points = {
+				red = Vector3Box(36.05, -92.018, 48.324),
+				white = Vector3Box(-4, -53, 42)
+			}
 		}
 	},
 	Victor = {
@@ -1097,6 +1144,9 @@ LevelSettings = {
 		sp_requirement_id = 0,
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
+			GameModeSettings.tdm,
+			GameModeSettings.con,
+			GameModeSettings.battle,
 			GameModeSettings.ass
 		},
 		level_particle_effects = {
@@ -1132,6 +1182,40 @@ LevelSettings = {
 		tip_of_the_day = DEFAULT_TIP_LIST,
 		game_modes = {
 			GameModeSettings.tdm
+		},
+		level_particle_effects = {},
+		level_screen_effects = {},
+		loading_screen_preview = {
+			texture_1920 = "ravenspurn_loading_1920",
+			texture_1366 = "ravenspurn_loading_1920"
+		}
+	},
+	Castle = {
+		package_name = "resource_packages/levels/market_01",
+		game_server_map_name = "Castle",
+		map_id = 31,
+		deserter_setting = "deserting",
+		on_spawn_flow_event = "cold_breath_deactivate",
+		show_in_server_browser = true,
+		sort_index = 30,
+		last_stand_setting = "bleeding",
+		visible = true,
+		ghost_mode_setting = "ghost_mode",
+		single_player = false,
+		display_name = "level_castle",
+		stop_music = "Stop_holmgang_battle_music",
+		ui_description = "level_description_mp_island_01",
+		loading_background = "castle_load",
+		executed_setting = "executed",
+		music = "Play_holmgang_battle_music",
+		knocked_down_setting = "knocked_down",
+		level_name = "levels/castle_01/world",
+		sp_progression_id = 6,
+		sp_requirement_id = 0,
+		tip_of_the_day = DEFAULT_TIP_LIST,
+		game_modes = {
+			GameModeSettings.tdm,
+			GameModeSettings.battle
 		},
 		level_particle_effects = {},
 		level_screen_effects = {},
