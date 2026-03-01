@@ -97,11 +97,17 @@ Northbound - con, battle
 Strand - tdm, battle
 Outpost - tdm, domination
 Mire - tdm, battle
-Market - tdm, con, arena, battle
+Market - tdm, con, arena, battle, headhunter
 Holmgang - tdm
 Desert - tdm
 Cove - tdm, con, battle
 Victor - tdm, battle
+Ravenspurn - ass, tdm
+Seasick - tdm
+Castle - tdm, battle
+Entryway - tdm, domination
+Shore - tdm, domination
+Roman_Remnants - tdm
 ```
 ## Build
 Use this version of LuaJIT for compiling lua files:
