@@ -150,11 +150,7 @@ GameSettingsDevelopment.enable_paradox_os = false
 
 GameSettingsDevelopment.anti_cheat_enabled = false
 
-if table.find(argv, "-no-tutorial") then
-	GameSettingsDevelopment.enforce_tutorial = false
-else
-	GameSettingsDevelopment.enforce_tutorial = true
-end
+GameSettingsDevelopment.enforce_tutorial = false
 
 GameSettingsDevelopment.paradox_api = "https://0.0.0.0/%s"
 GameSettingsDevelopment.paradox_api_key = "64DC4DC6508F4A9D823179D4D99DB4EE"
