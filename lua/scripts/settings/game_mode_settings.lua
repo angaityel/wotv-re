@@ -38,7 +38,8 @@ GameModeSettings.base = {
 		pulse_offset_for_side = "attackers",
 		type = "pulse",
 		squad_screen = true,
-		pulse_length = 0.1
+		pulse_length = 5,
+		pulse_offset = 2.5
 	},
 	allowed_spawning = {
 		pulse = true,
