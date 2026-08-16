@@ -100,7 +100,7 @@ Mire - tdm, battle
 Market - tdm, con, arena, battle, headhunter
 Holmgang - tdm
 Desert - tdm
-Cove - tdm, con, battle
+Cove - tdm, con, battle, arena
 Victor - tdm, battle
 Ravenspurn - ass, tdm
 Seasick - tdm
