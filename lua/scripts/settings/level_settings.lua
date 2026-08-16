@@ -823,18 +823,18 @@ LevelSettings = {
 		},
 		minimap = {
 			scale = 1,
-			rotation = 3.93 - math.pi * 0.5,
+			rotation = 2.9,
 			anchor = {
-				46,
-				-41
+				-44,
+				14
 			},
 			fade = {
 				outer = 85,
 				inner = 60
 			},
 			spawn_points = {
-				red = Vector3Box(36.05, -92.018, 48.324),
-				white = Vector3Box(-4, -53, 42)
+				red = Vector3Box(-115, -40, 42),
+				white = Vector3Box(46, 0, 42)
 			}
 		}
 	},
@@ -1069,19 +1069,19 @@ LevelSettings = {
 			texture_1366 = "ravenspurn_loading_1920"
 		},
 		minimap = {
-			scale = 1,
-			rotation = 3.93 - math.pi * 0.5,
+			scale = 1.5,
+			rotation = 2.5,
 			anchor = {
-				46,
-				-41
+				-175,
+				-40
 			},
 			fade = {
 				outer = 85,
 				inner = 60
 			},
 			spawn_points = {
-				red = Vector3Box(36.05, -92.018, 48.324),
-				white = Vector3Box(-4, -53, 42)
+				red = Vector3Box(-170, -70, 40),
+				white = Vector3Box(-199, -32, 20)
 			}
 		}
 	},
@@ -1121,7 +1121,7 @@ LevelSettings = {
 		}
 	},
 	Ravenspurn = {
-		package_name = "resource_packages/levels/ravenspurn_01",
+		package_name = "resource_packages/levels/market_01",
 		game_server_map_name = "Ravenspurn",
 		map_id = 29,
 		deserter_setting = "deserting",
@@ -1158,7 +1158,7 @@ LevelSettings = {
 		}
 	},
 	Seasick = {
-		package_name = "resource_packages/levels/seasick_01",
+		package_name = "resource_packages/levels/tutorial_01",
 		game_server_map_name = "Seasick",
 		map_id = 30,
 		deserter_setting = "deserting",
